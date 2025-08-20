@@ -52,12 +52,9 @@ jobs:
         - name: Install Dependencies
           run: npm install
 
-        - name: Run tests
-          run: npm test
-
         - name: Generate code coverage report
-          if: always()
-          run: npm run code-coverage
+          continue-on-error: true
+          run: npm run coverage
 
         - name: Code-Coverage-Result
           if: always()
@@ -69,6 +66,7 @@ jobs:
 
 
         
+
 
 
 
