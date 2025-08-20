@@ -56,6 +56,7 @@ jobs:
           run: npm test
 
         - name: Generate code coverage report
+          if: always()
           run: npm run coverage
 
         - name: Code-Coverage-Result
@@ -68,6 +69,7 @@ jobs:
 
 
         
+
 
 
 
