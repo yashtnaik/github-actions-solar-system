@@ -6,8 +6,11 @@ on:
     branches:
       - main
       - 'feature/*'
+env:
+  MONGO_URI='mongodb+srv://supercluster.d83jj.mongodb.net/superData'
+  MONGO_USERNAME:'superuser'
+  MONGO_PASSWORD:'SuperPassword'
 
-    
 jobs:
     unit-testing:
         name: Unit Testing
@@ -32,4 +35,5 @@ jobs:
           with:
             name: Mocha-Test-Result
             path: test-results.xml
+
 
