@@ -57,18 +57,19 @@ jobs:
 
         - name: Generate code coverage report
           if: always()
-          run: npm run coverage
+          run: npm run code-coverage
 
         - name: Code-Coverage-Result
           if: always()
           uses: actions/upload-artifact@v4
           with:
-            name: Mocha-Test-Result
+            name: Code-Coverage-Result
             path: coverage
             retention-days: 5
 
 
         
+
 
 
 
